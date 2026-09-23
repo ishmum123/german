@@ -1,0 +1,29 @@
+# A1 core list: everyday words forced into A1 (the closed sets - days,
+# months, seasons, numbers, colours, pronouns, articles, question words,
+# core prepositions/conjunctions, greetings - are in langs/de.py).
+# Written with German capitalisation; the builder lowercases internally.
+# Hand-picked everyday vocabulary; not derived from any Goethe list.
+
+[NOUN]
+Mann Frau Kind Junge Mädchen Vater Mutter Bruder Schwester Sohn Tochter Eltern Familie Freund
+Mensch Leute Name Haus Wohnung Zimmer Küche Tür Fenster Tisch Stuhl Bett Schule Lehrer Arbeit
+Büro Stadt Land Straße Auto Bus Zug Bahnhof Geld Buch Brief Zeitung Handy Telefon Wasser Kaffee
+Tee Milch Bier Wein Brot Essen Fleisch Obst Apfel Ei Käse Kuchen Frühstück Tag Nacht Morgen Abend
+Woche Monat Jahr Stunde Minute Uhr Zeit Wetter Sonne Regen Hund Katze Arzt Krankenhaus Kopf Hand
+Auge Geschäft Preis Hotel Restaurant Frage Antwort Sprache Urlaub Film Musik Sport Garten Baum
+Blume Kleid Schuh Farbe Bild Fahrrad Reise Weg Platz Glas Flasche Hunger Durst Beruf Computer
+
+[VERB]
+sein haben werden können müssen wollen sollen dürfen mögen gehen kommen machen sagen sehen geben
+nehmen essen trinken schlafen wohnen leben arbeiten lernen spielen lesen schreiben sprechen hören
+fahren laufen kaufen bezahlen kosten brauchen finden suchen wissen kennen heißen verstehen fragen
+antworten helfen öffnen warten bleiben stehen sitzen liegen denken glauben lieben kochen reisen
+besuchen anrufen aufstehen einkaufen anfangen zeigen bringen
+
+[ADJ]
+gut schlecht groß klein alt neu jung schön lang kurz heiß kalt warm teuer billig schnell langsam
+viel wenig früh spät richtig falsch krank müde glücklich nett laut leise voll leer wichtig einfach
+
+[ADV]
+hier dort da heute morgen gestern jetzt immer oft nie manchmal auch sehr gern schon noch nur wieder
+bald dann vielleicht links rechts
