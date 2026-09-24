@@ -17,7 +17,22 @@ German rules live in `engine/tools/packbuilder/langs/de.py`.
 Goethe-Zertifikat B1 also needs grammar, writing and speaking practice,
 which this app does not teach.
 
-**Data quality:** Three QA rounds hand-checked stratified samples. The final round, on fresh seeds, had 60/60 correct primary senses in a 60-word sample and 339 of 341 correct word links in 60 sentences. Both wrong links were then fixed by rules. A fix round after browser QA then fixed these classes by rule: plural nouns read as verbs (Antworten, in vielen Fällen), ihr routing, gehört after haben, second-entry routing (ja sagen, lieber … als, gleich), phrase components (Auf Wiedersehen) and past-subjunctive sentences at A1/A2. A fresh sample after it had 60/60 correct primary senses and 195 of 196 correct links in 33 sentences. The top 300 words have no wrong part of speech. Every noun shows a plural line. Plurals nobody uses (Milchen, Januare) show "rarely pl.". All but 23 words have an example showing the word's own form. Sexual and suicide content is kept out of A1/A2 sentences. Levels are frequency bands, not CEFR: a probe of 41 hand-picked words puts every expected-A1 word in A1 and 36 of 41 within one level, but frequent B1 words such as obwohl and Meinung land in A2. Rules, counts and seeds are in `tools/REPORT.md`, and residuals are in `TODO.md`.
+**Data quality:** Three QA rounds hand-checked stratified samples. The final round, on fresh seeds, had 60/60 correct primary senses in a 60-word sample and 339 of 341 correct word links in 60 sentences. Both wrong links were then fixed by rules. A fix round after browser QA then fixed these classes by rule: plural nouns read as verbs (Antworten, in vielen Fällen), ihr routing, gehört after haben, second-entry routing (ja sagen, lieber … als, gleich), phrase components (Auf Wiedersehen) and past-subjunctive sentences at A1/A2. A fresh sample after it had 60/60 correct primary senses and 195 of 196 correct links in 33 sentences. The top 300 words have no wrong part of speech. Every noun shows a plural line. Plurals nobody uses (Milchen, Januare) show "rarely pl.". All but 23 words have an example showing the word's own form. Levels are frequency bands, not CEFR: a probe of 41 hand-picked words puts every expected-A1 word in A1 and 36 of 41 within one level, but frequent B1 words such as obwohl and Meinung land in A2. Rules, counts and seeds are in `tools/REPORT.md`, and residuals are in `TODO.md`.
+
+**Content policy:** sentences on sexual content, suicide, threats, violence,
+dying or death wishes, weapons, blood, poison, corpses, drugs or abuse (a
+shared English list plus German terms) are kept out of A1/A2. A word that is
+itself on the list, such as sterben or die Waffe, takes B1-level examples.
+The policy rebuild held 18 more A1/A2 sentences: 10 moved to B1 and 8 were
+replaced by clean A1/A2 sentences. No word, gloss or id changed. Sentences
+about rape or sexual/child abuse are removed at every level (4 candidates),
+and the check fails on a match. A shared vulgar/sexual English word list also
+scans glosses: a matching sense never leads an A1/A2 gloss, and the check
+fails on any match. töten, sterben and Tod stay at their frequency level as
+neutral core vocabulary; their violent sentences reach learners only at B1
+(same call as Spanish matar/morir and Russian убить). The English half of
+the filter skips die, dies and gift, which are German words; the German side
+(sterben, vergiften) catches those sentences.
 
 ## Layout
 

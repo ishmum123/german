@@ -42,16 +42,16 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 795, 'verb': 519, 'adj'
 
 ## Sentences
 
-- Final sentences: **3,406**, 930 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
+- Final sentences: **3,408**, 930 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
 - Word coverage: 0 = 0, 1 = 1, 2 = 1999.
-- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 306,204. Rejected for a content lemma outside pack/top-3000: 167,142.
-- Präteritum (other than sein/haben/modals): 45,043 candidates contain one; 44,998 were blocked for A1/A2 words; 250 in the final set (all lv B1).
-- Primary word level of each sentence: {'A1': 900, 'A2': 1235, 'B1': 1271}.
+- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 306,200. Rejected for a content lemma outside pack/top-3000: 167,142.
+- Präteritum (other than sein/haben/modals): 46,283 candidates contain one; 46,235 were blocked for A1/A2 words; 263 in the final set (all lv B1).
+- Primary word level of each sentence: {'A1': 901, 'A2': 1236, 'B1': 1271}.
 - Token-length distribution of the final set:
 
 | tokens | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| sentences | 363 | 708 | 202 | 999 | 1005 | 94 | 21 | 5 | 7 | 2 |
+| sentences | 364 | 708 | 201 | 1001 | 1005 | 94 | 21 | 5 | 7 | 2 |
 
 ## Top 100 by rank (lemma [pos] gloss)
 
@@ -202,7 +202,8 @@ ja/nein before sagen is yes/no; als after a comparative is "than"; ADJD
 gleich without a copula is the adverb; clause-final particles (ADP/ADV) and
 imperatives after und join separable verbs; hätte/wäre + participle or modal
 infinitive is marked (kept to B1). Core flags enabled: phrase_token_spans,
-sensitive_re, refill_unexampled (Altbau replaced), example_shows_word (new).
+sensitive_re, refill_unexampled (Altbau replaced), example_shows_word (new),
+drop_all_levels and sensitive_gloss_re (content-policy rebuild, below).
 Class scan after the round: 0 plural nouns linked as verbs outside
 nominalised infinitives (was 21; residuals tausend Leben, Binden);
 gehört-after-haben mis-links 0 (was 10/16); ihr misroutes 0; Auf Wiedersehen
@@ -212,4 +213,26 @@ component links 0; A1/A2 perfect Konjunktiv 0; separable reverse-scan misses
 (tools/id_map_v1.json) is frozen: 2000/2000 ids reused on rebuild.
 Determinism: two builds with different PYTHONHASHSEED give byte-identical
 pack/*.json.
+
+Content-policy rebuild (2026-09-24, vocab-engine tools): sensitive_re extended
+to the cross-pack A1/A2 tier (sterben in every form, stirb, Waffe, Pistole,
+Gewehr, Bombe, explodieren, Messer only in a threat, Blut/bluten but not
+Blutdruck, vergiften, Leiche, Drogen, Missbrauch, misshandeln, plus the shared
+English list; English die/dies/gift are left out because they are German
+words). drop_all_levels: vergewaltig*, sexueller Missbrauch, Kindesmissbrauch,
+Pädophil*, plus the shared English list. sensitive_gloss_re: shared
+SENSITIVE_GLOSS_EN. lower_level_gloss_re stays off: töten, sterben and Tod
+keep their level (same call as es and ru). Counts: candidates held to B1
+3,602 (2,792 of them would otherwise serve A1/A2 words); dropped at all levels
+4; gloss senses skipped 14 lemmas (bastard, befriedigen, beschissen, blasen,
+gemein, gewöhnlich, höhepunkt, knallen, kommen, lieben, schimpfen, schnecke,
+schwanz, treiben), no shipped gloss changed. Diff against the previous pack:
+words.json byte-identical (2000/2000 ids reused, 0 words or glosses changed);
+sentences 3,406 -> 3,408 (A1 896 -> 895, A2 1,227 -> 1,220, B1 1,283 -> 1,293);
+10 sentences moved A1/A2 -> B1 (sterben, Waffe, Blut, Leiche, Droge); 9
+removed (8 sensitive: gestorben, stirbst, sterbe, Waffe, "dying for a cold
+drink"; 1 collateral: "Diese dunklen Wolken werden vermutlich Regen bringen");
+11 clean sentences added (A1 3, A2 8). Check: 0 errors, 13 warnings (unchanged).
+de-qa2 claim scans (plurals, ihr, gehört, second-entry routing) identical to
+the previous pack. Determinism: PYTHONHASHSEED 1 and 2 byte-identical.
 <!-- manual:end -->
