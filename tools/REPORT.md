@@ -136,7 +136,7 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 795, 'verb': 519, 'adj'
   78 sehr [adv] very
   79 das Jahr [noun] year
   80 unser [det] our
-  81 um [prep] around; at (time)
+  81 um [prep] around; at (time); for, about (bitten um, sich kümmern um)
   82 finden [verb] to find
   83 also [adv] so, therefore
   84 mehr [adv] more

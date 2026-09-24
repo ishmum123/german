@@ -9,6 +9,30 @@ Residuals from the v1 QA rounds. The rules already in place are described in
   trotzdem sits in A1. Bewerbung, Umwelt, Führerschein and Miete fall
   outside the 2000 words. A written-register frequency list, or a larger
   pack, would fix this.
+- The subtitle-based word list lacks other everyday words too: Supermarkt,
+  Gemüse, regnen, Schnee, Jacke, Miete, Fahrkarte, Ausland and parken are
+  all missing (per the author, checking against everyday vocabulary while
+  writing the reading passages). A v2 word-list pass should fold these in.
+
+## Reading passages
+- A native-speaker pass over the 60 texts has not been done yet; only an
+  automated QA pass plus one round of manual/external QA fixes (see
+  `tools/REPORT_passages.md` for the full manual notes and per-passage
+  coverage/link numbers).
+- Idiom parts still link separately rather than as a phrase: vor allem
+  (links alles), unter der Woche (links Woche), erst einmal (links erst +
+  einmal), Danke schön (links schön).
+- The sentence-initial article in "Die meisten ..." (p0043 s5) has no span.
+- The only out-of-pack word across all 60 passages is gleis, a station-
+  announcement term (p0033), judged unavoidable there.
+- The passage linker rules for German (finite-verb-next-to-subject
+  disambiguation, salutation lieb vs. lieben, meisten/Meister guard, gehört
+  after haben, am liebsten/lieber, als/wie clause-role rules, alle-family
+  routing, zu/um preposition-vs-infinitive-marker rules, kennenlernen
+  joining, capitalised-noun-as-name overrides) live in vocab-engine's
+  `packbuilder/langs/de.py` passage hooks, not in this repo. The same rules
+  would change 6 word-id links if turned on for the full sentence corpus
+  (currently passage-only; see `tools/REPORT_passages.md`).
 
 ## Sentence links
 - Genitive and dative pronoun forms used as possessive-looking words
