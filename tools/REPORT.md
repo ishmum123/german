@@ -42,16 +42,16 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 804, 'verb': 513, 'adj'
 
 ## Sentences
 
-- Final sentences: **3,407**, 940 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
+- Final sentences: **3,399**, 935 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
 - Word coverage: 0 = 0, 1 = 1, 2 = 1999.
 - Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 307,526. Rejected for a content lemma outside pack/top-3000: 165,564.
-- Präteritum (other than sein/haben/modals): 46,247 candidates contain one; 46,204 were blocked for A1/A2 words; 254 in the final set (all lv B1).
-- Primary word level of each sentence: {'A1': 902, 'A2': 1232, 'B1': 1273}.
+- Präteritum (other than sein/haben/modals): 46,247 candidates contain one; 46,198 were blocked for A1/A2 words; 247 in the final set (all lv B1).
+- Primary word level of each sentence: {'A1': 901, 'A2': 1229, 'B1': 1269}.
 - Token-length distribution of the final set:
 
 | tokens | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| sentences | 364 | 709 | 198 | 993 | 1021 | 88 | 21 | 5 | 6 | 2 |
+| sentences | 361 | 708 | 199 | 991 | 1020 | 88 | 19 | 5 | 6 | 2 |
 
 ## Top 100 by rank (lemma [pos] gloss)
 
@@ -265,4 +265,5 @@ drop-everywhere terms removed s1015 (Selbstmord). The other changed
 sentences come from reselection around the 78 words. Other ids, levels and
 glosses are unchanged. Check: 0 errors, 13 warnings. Determinism: two builds
 (PYTHONHASHSEED 123 vs unset) byte-identical.
+- 2026-09-25: engine bumped to 072795d (voice-init fix, no-voice notice timing, word ceiling). 8 words moved A2->B1 under the shared word-level ceiling: töten, Waffe, Sex, Blut, umbringen, Mord, Droge, Leiche. Band-edge shifts from re-counting: außer A2->A1; Loch, studieren, präsentieren, teilnehmen, Pause, Doktor, Vorschlag, Schicksal B1->A2. Sentences 3,407 -> 3,399 (8 dropped, 0 added), passages byte-identical. No rank, id or gloss changed.
 <!-- manual:end -->

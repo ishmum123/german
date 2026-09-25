@@ -36,21 +36,21 @@ tokens of the passage text, the count the app shows (report only).
 | p0019 | A1 | Einkaufen am Samstag | 84 | 84 | 1.000 | 1.000 | - | A2: Geburtstag |
 | p0020 | A1 | Ich lerne Deutsch | 89 | 89 | 1.000 | 1.000 | - | A2: Klasse, Spaß |
 | p0021 | A2 | Urlaub am Meer | 112 | 112 | 1.000 | 1.000 | - | B1: Fisch, Museum, Strand |
-| p0022 | A2 | Der neue Job von Markus | 116 | 116 | 1.000 | 1.000 | - | B1: Pause |
+| p0022 | A2 | Der neue Job von Markus | 116 | 116 | 1.000 | 1.000 | - | - |
 | p0023 | A2 | Ein Termin beim Arzt | 97 | 97 | 1.000 | 1.000 | - | B1: Hals |
 | p0024 | A2 | Zimmer frei! | 118 | 119 | 1.000 | 1.000 | - | B1: Student, Universität, hell |
 | p0025 | A2 | Kalter Tee mit Obst | 111 | 111 | 1.000 | 1.000 | - | B1: Eis, womit |
-| p0026 | A2 | Ein schwieriger Tag | 114 | 114 | 1.000 | 1.000 | - | B1: Pause, Strom, klingeln |
+| p0026 | A2 | Ein schwieriger Tag | 114 | 114 | 1.000 | 1.000 | - | B1: Strom, klingeln |
 | p0027 | A2 | Ein neuer Park für die Stadt | 117 | 119 | 1.000 | 1.000 | - | B1: Konzert, eröffnen, mitkommen |
 | p0028 | A2 | Eine Überraschung für Oma | 106 | 106 | 1.000 | 1.000 | - | B1: Oma, überrascht |
 | p0029 | A2 | Ein voller Tag | 119 | 119 | 1.000 | 1.000 | - | B1: Nachmittag, reparieren |
 | p0030 | A2 | Welchen Film sehen wir? | 110 | 110 | 1.000 | 1.000 | - | B1: Kino, Mond, Ticket |
 | p0031 | A2 | Zehn Kilometer durch die Stadt | 112 | 112 | 1.000 | 1.000 | - | B1: Kilometer, Mut, trainieren |
-| p0032 | A2 | Neu an der Universität | 119 | 119 | 1.000 | 1.000 | - | B1: Prüfung, Universität, studieren |
+| p0032 | A2 | Neu an der Universität | 119 | 119 | 1.000 | 1.000 | - | B1: Prüfung, Universität |
 | p0033 | A2 | Information am Bahnhof | 97 | 97 | 0.977 | 0.977 | gleis x2 (station term (platform), unavoidable in an announcement) | B1: Achtung, Fahrt, einsteigen |
 | p0034 | A2 | Auf dem Markt | 119 | 119 | 1.000 | 1.000 | - | B1: Bauer, Fisch |
 | p0035 | A2 | Meine Straße | 117 | 117 | 1.000 | 1.000 | - | B1: Westen, zumachen |
-| p0036 | A2 | Ein Unfall mit dem Fahrrad | 115 | 115 | 1.000 | 1.000 | - | B1: Fahrer, Pause, aussteigen |
+| p0036 | A2 | Ein Unfall mit dem Fahrrad | 115 | 115 | 1.000 | 1.000 | - | B1: Fahrer, aussteigen |
 | p0037 | A2 | Ein Kurs zum Kochen | 118 | 118 | 1.000 | 1.000 | - | - |
 | p0038 | A2 | Ein Brief aus Wien | 119 | 119 | 1.000 | 1.000 | - | B1: Museum |
 | p0039 | A2 | Das Fest im Dorf | 112 | 112 | 1.000 | 1.000 | - | B1: Region |
