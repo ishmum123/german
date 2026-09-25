@@ -153,6 +153,8 @@ The builder's German module handles what the shared pipeline cannot guess.
 | Sentence translations | Tatoeba `eng_sentences.tsv` + `deu-eng_links.tsv` | CC-BY 2.0 FR | English translations |
 | Sentence audio | Tatoeba `sentences_with_audio.tar.bz2` | CC BY / CC BY-SA / CC0, per clip; only permissive clips are linked | `sentences.json[].audio`; recorders per licence in `pack/attribution.json` |
 
+Licence: code MIT, pack data CC BY-SA 4.0, see LICENSE.
+
 No licence is non-commercial. No graded German word list is used or shipped.
 The Goethe-Institut lists are copyrighted, and Kelly has no German list.
 
