@@ -203,5 +203,16 @@
  "dick|adj": "fat, thick; swollen",
  "freund|noun": "friend; boyfriend (die Freundin: girlfriend)",
  "nah|adj": "near, close, nearby; (nächst-) next",
- "früh|adj": "early; (früher) earlier, formerly"
+ "früh|adj": "early; (früher) earlier, formerly",
+ "lohn|noun": "wage, pay; reward",
+ "salz|noun": "salt",
+ "fahrkarte|noun": "ticket (bus, train)",
+ "haltestelle|noun": "stop (bus, tram)",
+ "bewerbung|noun": "(job) application",
+ "ausweis|noun": "ID card, identity document",
+ "hausaufgabe|noun": "homework",
+ "umsteigen|verb": "to change (trains, buses)",
+ "möbel|noun": "piece of furniture; (pl.) furniture",
+ "verspätung|noun": "delay, late arrival",
+ "parkplatz|noun": "car park, parking space"
 }

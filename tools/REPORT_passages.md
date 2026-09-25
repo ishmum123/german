@@ -6,73 +6,81 @@ punctuation not counted). Level budget (passage + questions + options): A1 may u
 <=3 A2 lemmas and no B1; A2 may use <=3 B1 lemmas; B1 may use anything in the pack.
 Linked = tokens whose word id is also in the sentence's `words` (the stricter share:
 a pack lemma can go unlinked when the tagger reads it with another POS).
+words = the builder's word count (the band rule); ws_words = whitespace-separated
+tokens of the passage text, the count the app shows (report only).
 
-- **A1**: 20 passages; words/passage 64-89 (median 77.5); coverage min 1.000, median 1.000 (rule >= 0.95); linked min 1.000; questions mc 42, tf 45
-- **A2**: 20 passages; words/passage 97-119 (median 114.5); coverage min 0.977, median 1.000 (rule >= 0.95); linked min 0.977; questions mc 50, tf 48
-- **B1**: 20 passages; words/passage 132-149 (median 145.0); coverage min 1.000, median 1.000 (rule >= 0.93); linked min 1.000; questions mc 51, tf 49
+- **A1**: 20 passages; words/passage 64-89 (median 77.5); ws_words 64-89; coverage min 1.000, median 1.000 (rule >= 0.95); linked min 1.000; questions mc 42, tf 45
+- **A2**: 20 passages; words/passage 97-119 (median 114.5); ws_words 97-119; coverage min 0.977, median 1.000 (rule >= 0.95); linked min 0.977; questions mc 50, tf 48
+- **B1**: 20 passages; words/passage 132-149 (median 145.0); ws_words 133-150; coverage min 1.000, median 1.000 (rule >= 0.93); linked min 1.000; questions mc 51, tf 49
 
-| id | lv | title | words | coverage | linked | out-of-pack lemmas (reason) | higher-level lemmas |
-|---|---|---|---|---|---|---|---|
-| p0001 | A1 | Mein Tag | 79 | 1.000 | 1.000 | - | - |
-| p0002 | A1 | Meine Familie | 69 | 1.000 | 1.000 | - | - |
-| p0003 | A1 | Ein Kaffee, bitte | 76 | 1.000 | 1.000 | - | A2: Geburtstag, bestellen |
-| p0004 | A1 | Eine Nachricht an Lena | 67 | 1.000 | 1.000 | - | A2: Park |
-| p0005 | A1 | Das Wetter heute | 71 | 1.000 | 1.000 | - | A2: Grad, Wind, anziehen |
-| p0006 | A1 | Mit dem Zug nach Hamburg | 64 | 1.000 | 1.000 | - | A2: dauern |
-| p0007 | A1 | Die neue Wohnung | 81 | 1.000 | 1.000 | - | A2: Bad, Nachbar |
-| p0008 | A1 | Im Restaurant | 81 | 1.000 | 1.000 | - | A2: bestellen |
-| p0009 | A1 | Unser Hund Bello | 77 | 1.000 | 1.000 | - | A2: Fuß, Park |
-| p0010 | A1 | Wir machen Urlaub | 78 | 1.000 | 1.000 | - | A2: Kunde, lieb |
-| p0011 | A1 | Komm zu meiner Party! | 76 | 1.000 | 1.000 | - | A2: Party, mitbringen, tanzen |
-| p0012 | A1 | Beim Arzt | 75 | 1.000 | 1.000 | - | A2: Chef, Ruhe, Schmerz |
-| p0013 | A1 | Sonntag im Garten | 80 | 1.000 | 1.000 | - | A2: Ball |
-| p0014 | A1 | Der erste Tag im Büro | 83 | 1.000 | 1.000 | - | A2: Firma, Park, kennenlernen |
-| p0015 | A1 | Wo ist der Bahnhof? | 65 | 1.000 | 1.000 | - | A2: Fuß |
-| p0016 | A1 | Die Katze am Fenster | 83 | 1.000 | 1.000 | - | A2: Vogel |
-| p0017 | A1 | Eine Karte aus Italien | 82 | 1.000 | 1.000 | - | A2: Grad, Meer, Papa |
-| p0018 | A1 | Wo bist du? | 74 | 1.000 | 1.000 | - | A2: Mama, Park, abholen |
-| p0019 | A1 | Einkaufen am Samstag | 84 | 1.000 | 1.000 | - | A2: Geburtstag |
-| p0020 | A1 | Ich lerne Deutsch | 89 | 1.000 | 1.000 | - | A2: Klasse, Spaß |
-| p0021 | A2 | Urlaub am Meer | 112 | 1.000 | 1.000 | - | B1: Fisch, Museum, Strand |
-| p0022 | A2 | Der neue Job von Markus | 116 | 1.000 | 1.000 | - | B1: Pause |
-| p0023 | A2 | Ein Termin beim Arzt | 97 | 1.000 | 1.000 | - | B1: Hals |
-| p0024 | A2 | Zimmer frei! | 118 | 1.000 | 1.000 | - | B1: Student, Universität, hell |
-| p0025 | A2 | Kalter Tee mit Obst | 111 | 1.000 | 1.000 | - | B1: Eis, womit |
-| p0026 | A2 | Ein schwieriger Tag | 114 | 1.000 | 1.000 | - | B1: Pause, Strom, klingeln |
-| p0027 | A2 | Ein neuer Park für die Stadt | 117 | 1.000 | 1.000 | - | B1: Konzert, eröffnen, mitkommen |
-| p0028 | A2 | Eine Überraschung für Oma | 106 | 1.000 | 1.000 | - | B1: Oma, überrascht |
-| p0029 | A2 | Ein voller Tag | 119 | 1.000 | 1.000 | - | B1: Nachmittag, reparieren |
-| p0030 | A2 | Welchen Film sehen wir? | 110 | 1.000 | 1.000 | - | B1: Kino, Mond, Ticket |
-| p0031 | A2 | Zehn Kilometer durch die Stadt | 112 | 1.000 | 1.000 | - | B1: Kilometer, Mut, trainieren |
-| p0032 | A2 | Neu an der Universität | 119 | 1.000 | 1.000 | - | B1: Prüfung, Universität, studieren |
-| p0033 | A2 | Information am Bahnhof | 97 | 0.977 | 0.977 | gleis x2 (station term (platform), unavoidable in an announcement) | B1: Achtung, Fahrt, einsteigen |
-| p0034 | A2 | Auf dem Markt | 119 | 1.000 | 1.000 | - | B1: Bauer, Fisch |
-| p0035 | A2 | Meine Straße | 117 | 1.000 | 1.000 | - | B1: Westen, zumachen |
-| p0036 | A2 | Ein Unfall mit dem Fahrrad | 115 | 1.000 | 1.000 | - | B1: Fahrer, Pause, aussteigen |
-| p0037 | A2 | Ein Kurs zum Kochen | 118 | 1.000 | 1.000 | - | - |
-| p0038 | A2 | Ein Brief aus Wien | 119 | 1.000 | 1.000 | - | B1: Museum |
-| p0039 | A2 | Das Fest im Dorf | 112 | 1.000 | 1.000 | - | B1: Region |
-| p0040 | A2 | Mein Handy ist kaputt | 112 | 1.000 | 1.000 | - | B1: reparieren, seitdem |
-| p0041 | B1 | Eine schwierige Entscheidung | 148 | 1.000 | 1.000 | - | - |
-| p0042 | B1 | Ein Brief an das Hotel | 147 | 1.000 | 1.000 | - | - |
-| p0043 | B1 | Das alte Kino schließt | 132 | 1.000 | 1.000 | - | - |
-| p0044 | B1 | Als meine Oma jung war | 145 | 1.000 | 1.000 | - | - |
-| p0045 | B1 | Besser schlafen | 138 | 1.000 | 1.000 | - | - |
-| p0046 | B1 | Hilfe für ältere Nachbarn | 146 | 1.000 | 1.000 | - | - |
-| p0047 | B1 | Zu viele Autos in der Stadt | 139 | 1.000 | 1.000 | - | - |
-| p0048 | B1 | Meine erste Reise allein | 147 | 1.000 | 1.000 | - | - |
-| p0049 | B1 | Jugendliche und das Handy | 148 | 1.000 | 1.000 | - | - |
-| p0050 | B1 | Lärm in der Nacht | 137 | 1.000 | 1.000 | - | - |
-| p0051 | B1 | Den Beruf wechseln? | 149 | 1.000 | 1.000 | - | - |
-| p0052 | B1 | Ein Garten auf dem Dach | 142 | 1.000 | 1.000 | - | - |
-| p0053 | B1 | Wer kocht am besten? | 142 | 1.000 | 1.000 | - | - |
-| p0054 | B1 | Die Hochzeit meines Bruders | 138 | 1.000 | 1.000 | - | - |
-| p0055 | B1 | Das Museum am Abend | 138 | 1.000 | 1.000 | - | - |
-| p0056 | B1 | Von zu Hause arbeiten | 149 | 1.000 | 1.000 | - | - |
-| p0057 | B1 | Mein Fahrrad ist weg | 147 | 1.000 | 1.000 | - | - |
-| p0058 | B1 | Mehr Busse für unser Dorf | 145 | 1.000 | 1.000 | - | - |
-| p0059 | B1 | Eine Sprache als Erwachsener lernen | 146 | 1.000 | 1.000 | - | - |
-| p0060 | B1 | In zehn Jahren | 143 | 1.000 | 1.000 | - | - |
+| id | lv | title | words | ws_words | coverage | linked | out-of-pack lemmas (reason) | higher-level lemmas |
+|---|---|---|---|---|---|---|---|---|
+| p0001 | A1 | Mein Tag | 79 | 79 | 1.000 | 1.000 | - | - |
+| p0002 | A1 | Meine Familie | 69 | 69 | 1.000 | 1.000 | - | - |
+| p0003 | A1 | Ein Kaffee, bitte | 76 | 76 | 1.000 | 1.000 | - | A2: Geburtstag, bestellen |
+| p0004 | A1 | Eine Nachricht an Lena | 67 | 67 | 1.000 | 1.000 | - | A2: Park |
+| p0005 | A1 | Das Wetter heute | 71 | 71 | 1.000 | 1.000 | - | A2: Grad, Wind, anziehen |
+| p0006 | A1 | Mit dem Zug nach Hamburg | 64 | 64 | 1.000 | 1.000 | - | A2: dauern |
+| p0007 | A1 | Die neue Wohnung | 81 | 81 | 1.000 | 1.000 | - | A2: Bad, Nachbar |
+| p0008 | A1 | Im Restaurant | 81 | 81 | 1.000 | 1.000 | - | A2: bestellen |
+| p0009 | A1 | Unser Hund Bello | 77 | 77 | 1.000 | 1.000 | - | A2: Fuß, Park |
+| p0010 | A1 | Wir machen Urlaub | 78 | 79 | 1.000 | 1.000 | - | A2: Kunde, lieb |
+| p0011 | A1 | Komm zu meiner Party! | 76 | 76 | 1.000 | 1.000 | - | A2: Party, mitbringen, tanzen |
+| p0012 | A1 | Beim Arzt | 75 | 75 | 1.000 | 1.000 | - | A2: Chef, Ruhe, Schmerz |
+| p0013 | A1 | Sonntag im Garten | 80 | 80 | 1.000 | 1.000 | - | A2: Ball |
+| p0014 | A1 | Der erste Tag im Büro | 83 | 83 | 1.000 | 1.000 | - | A2: Firma, Park, kennenlernen |
+| p0015 | A1 | Wo ist der Bahnhof? | 65 | 66 | 1.000 | 1.000 | - | A2: Fuß |
+| p0016 | A1 | Die Katze am Fenster | 83 | 83 | 1.000 | 1.000 | - | A2: Vogel |
+| p0017 | A1 | Eine Karte aus Italien | 82 | 82 | 1.000 | 1.000 | - | A2: Grad, Meer, Papa |
+| p0018 | A1 | Wo bist du? | 74 | 74 | 1.000 | 1.000 | - | A2: Mama, Park, abholen |
+| p0019 | A1 | Einkaufen am Samstag | 84 | 84 | 1.000 | 1.000 | - | A2: Geburtstag |
+| p0020 | A1 | Ich lerne Deutsch | 89 | 89 | 1.000 | 1.000 | - | A2: Klasse, Spaß |
+| p0021 | A2 | Urlaub am Meer | 112 | 112 | 1.000 | 1.000 | - | B1: Fisch, Museum, Strand |
+| p0022 | A2 | Der neue Job von Markus | 116 | 116 | 1.000 | 1.000 | - | B1: Pause |
+| p0023 | A2 | Ein Termin beim Arzt | 97 | 97 | 1.000 | 1.000 | - | B1: Hals |
+| p0024 | A2 | Zimmer frei! | 118 | 119 | 1.000 | 1.000 | - | B1: Student, Universität, hell |
+| p0025 | A2 | Kalter Tee mit Obst | 111 | 111 | 1.000 | 1.000 | - | B1: Eis, womit |
+| p0026 | A2 | Ein schwieriger Tag | 114 | 114 | 1.000 | 1.000 | - | B1: Pause, Strom, klingeln |
+| p0027 | A2 | Ein neuer Park für die Stadt | 117 | 119 | 1.000 | 1.000 | - | B1: Konzert, eröffnen, mitkommen |
+| p0028 | A2 | Eine Überraschung für Oma | 106 | 106 | 1.000 | 1.000 | - | B1: Oma, überrascht |
+| p0029 | A2 | Ein voller Tag | 119 | 119 | 1.000 | 1.000 | - | B1: Nachmittag, reparieren |
+| p0030 | A2 | Welchen Film sehen wir? | 110 | 110 | 1.000 | 1.000 | - | B1: Kino, Mond, Ticket |
+| p0031 | A2 | Zehn Kilometer durch die Stadt | 112 | 112 | 1.000 | 1.000 | - | B1: Kilometer, Mut, trainieren |
+| p0032 | A2 | Neu an der Universität | 119 | 119 | 1.000 | 1.000 | - | B1: Prüfung, Universität, studieren |
+| p0033 | A2 | Information am Bahnhof | 97 | 97 | 0.977 | 0.977 | gleis x2 (station term (platform), unavoidable in an announcement) | B1: Achtung, Fahrt, einsteigen |
+| p0034 | A2 | Auf dem Markt | 119 | 119 | 1.000 | 1.000 | - | B1: Bauer, Fisch |
+| p0035 | A2 | Meine Straße | 117 | 117 | 1.000 | 1.000 | - | B1: Westen, zumachen |
+| p0036 | A2 | Ein Unfall mit dem Fahrrad | 115 | 115 | 1.000 | 1.000 | - | B1: Fahrer, Pause, aussteigen |
+| p0037 | A2 | Ein Kurs zum Kochen | 118 | 118 | 1.000 | 1.000 | - | - |
+| p0038 | A2 | Ein Brief aus Wien | 119 | 119 | 1.000 | 1.000 | - | B1: Museum |
+| p0039 | A2 | Das Fest im Dorf | 112 | 112 | 1.000 | 1.000 | - | B1: Region |
+| p0040 | A2 | Mein Handy ist kaputt | 112 | 112 | 1.000 | 1.000 | - | B1: reparieren, seitdem |
+| p0041 | B1 | Eine schwierige Entscheidung | 148 | 148 | 1.000 | 1.000 | - | - |
+| p0042 | B1 | Ein Brief an das Hotel | 147 | 150 | 1.000 | 1.000 | - | - |
+| p0043 | B1 | Das alte Kino schließt | 132 | 133 | 1.000 | 1.000 | - | - |
+| p0044 | B1 | Als meine Oma jung war | 145 | 145 | 1.000 | 1.000 | - | - |
+| p0045 | B1 | Besser schlafen | 138 | 138 | 1.000 | 1.000 | - | - |
+| p0046 | B1 | Hilfe für ältere Nachbarn | 146 | 146 | 1.000 | 1.000 | - | - |
+| p0047 | B1 | Zu viele Autos in der Stadt | 139 | 139 | 1.000 | 1.000 | - | - |
+| p0048 | B1 | Meine erste Reise allein | 147 | 147 | 1.000 | 1.000 | - | - |
+| p0049 | B1 | Jugendliche und das Handy | 148 | 148 | 1.000 | 1.000 | - | - |
+| p0050 | B1 | Lärm in der Nacht | 137 | 137 | 1.000 | 1.000 | - | - |
+| p0051 | B1 | Den Beruf wechseln? | 149 | 150 | 1.000 | 1.000 | - | - |
+| p0052 | B1 | Ein Garten auf dem Dach | 142 | 142 | 1.000 | 1.000 | - | - |
+| p0053 | B1 | Wer kocht am besten? | 142 | 142 | 1.000 | 1.000 | - | - |
+| p0054 | B1 | Die Hochzeit meines Bruders | 138 | 138 | 1.000 | 1.000 | - | - |
+| p0055 | B1 | Das Museum am Abend | 138 | 139 | 1.000 | 1.000 | - | - |
+| p0056 | B1 | Von zu Hause arbeiten | 149 | 149 | 1.000 | 1.000 | - | - |
+| p0057 | B1 | Mein Fahrrad ist weg | 147 | 147 | 1.000 | 1.000 | - | - |
+| p0058 | B1 | Mehr Busse für unser Dorf | 145 | 145 | 1.000 | 1.000 | - | - |
+| p0059 | B1 | Eine Sprache als Erwachsener lernen | 146 | 146 | 1.000 | 1.000 | - | - |
+| p0060 | B1 | In zehn Jahren | 143 | 143 | 1.000 | 1.000 | - | - |
+
+Title words, and question/option words the budget does not count (a numeral-like
+pack word), that are out of the pack or above the passage's level (report only;
+the budget rule above is unchanged):
+
+- p0050: title 'Lärm': out of pack
 
 <!-- manual section: kept across runs -->
 

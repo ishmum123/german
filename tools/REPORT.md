@@ -23,12 +23,12 @@ Fallback lemmas whose POS could not be attached from another surface: 50,088. Cl
 
 ## Word-selection funnel
 
-Candidate pool: 6,857 (lemma, POS) keys in blended-rank order, one POS per lemma (its best-ranked corpus POS; articles der/ein kept alongside), plus forced items.
+Candidate pool: 6,858 (lemma, POS) keys in blended-rank order, one POS per lemma (its best-ranked corpus POS; articles der/ein kept alongside), plus forced items.
 
 | Exclusion | Count | Examples |
 |---|---|---|
 | no usable Wiktionary entry for corpus POS | 73 | hey, kriegen, wow, meister, viele, dar, tommy, gehts, that, vieler, gibts, gibts |
-| second POS entry without a distinct sense | 71 | aber, all, anderer, ganz, mehr, bis, dein, jeder, beide, warum, ohne, recht |
+| second POS entry without a distinct sense | 72 | aber, all, anderer, ganz, mehr, bis, dein, jeder, beide, warum, ohne, recht |
 | English loanword unattested in German corpus | 31 | miss, mom, boss, story, deal, top, lady, lord, van, out, pop, master |
 | interjection (not in forced greetings) | 25 | na, ach, okay, stimmt, o, ah, he, naja, ha, äh, ähm, weh |
 | proper noun (corpus PROPN/capitalised majority) | 15 | internet, hm, mark, ok, city, oh, rum, queen, billy, polen, lee, high |
@@ -36,22 +36,22 @@ Candidate pool: 6,857 (lemma, POS) keys in blended-rank order, one POS per lemma
 | profanity (hand list) | 3 | verdammt, ficken, nutte |
 
 Forced A1 items (days, months, seasons, numbers 0-20 + tens + hundert/tausend, colours, personal and possessive pronouns, question words, articles, core prepositions/conjunctions, greetings, A1 core list): 341/341 included.
-Word ids reused from v1 for unchanged (lemma, pos): 2,000; the rest are new ids above w2000 (v1 ids of words whose POS/lemma was wrong are retired, not reassigned).
+Word ids reused from v1 for unchanged (lemma, pos): 1,961; the rest are new ids above w2000 (v1 ids of words whose POS/lemma was wrong are retired, not reassigned).
 
-Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 795, 'verb': 519, 'adj': 320, 'adv': 201, 'prep': 41, 'num': 30, 'conj': 29, 'pron': 27, 'det': 22, 'intj': 7, 'phrase': 5, 'art': 2, 'part': 2}.
+Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 797, 'verb': 517, 'adj': 320, 'adv': 201, 'prep': 41, 'num': 30, 'conj': 29, 'pron': 27, 'det': 22, 'intj': 7, 'phrase': 5, 'art': 2, 'part': 2}.
 
 ## Sentences
 
-- Final sentences: **3,408**, 930 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
-- Word coverage: 0 = 0, 1 = 1, 2 = 1999.
-- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 306,200. Rejected for a content lemma outside pack/top-3000: 167,142.
-- Präteritum (other than sein/haben/modals): 46,283 candidates contain one; 46,235 were blocked for A1/A2 words; 263 in the final set (all lv B1).
-- Primary word level of each sentence: {'A1': 901, 'A2': 1236, 'B1': 1271}.
+- Final sentences: **3,409**, 943 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
+- Word coverage: 0 = 0, 1 = 0, 2 = 2000.
+- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 307,533. Rejected for a content lemma outside pack/top-3000: 165,559.
+- Präteritum (other than sein/haben/modals): 46,249 candidates contain one; 46,204 were blocked for A1/A2 words; 256 in the final set (all lv B1).
+- Primary word level of each sentence: {'A1': 901, 'A2': 1232, 'B1': 1276}.
 - Token-length distribution of the final set:
 
 | tokens | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| sentences | 364 | 708 | 201 | 1001 | 1005 | 94 | 21 | 5 | 7 | 2 |
+| sentences | 364 | 711 | 200 | 998 | 1015 | 89 | 20 | 5 | 6 | 1 |
 
 ## Top 100 by rank (lemma [pos] gloss)
 
@@ -183,8 +183,8 @@ adjectives (der Beste). Surviving round-3 errors were fixed after scoring.
 
 Probe of 41 hand-picked words (expected bands are intuition, not a graded
 list): 15/15 expected-A1 words land in A1; 36/41 are within one level;
-expected-B1 words skew to A2; Bewerbung, Umwelt, Führerschein and Miete are
-outside the 2000.
+expected-B1 words skew to A2; Bewerbung, Umwelt, Führerschein and Miete were
+outside the 2000 before the everyday-words round below.
 
 Nouns with a plural line: 795/795 (792 plurals, "rarely pl." for technical
 plurals under zipf 2.4 or corpus-unused, 3 plural-only). Closed sets complete
@@ -235,4 +235,30 @@ drink"; 1 collateral: "Diese dunklen Wolken werden vermutlich Regen bringen");
 11 clean sentences added (A1 3, A2 8). Check: 0 errors, 13 warnings (unchanged).
 de-qa2 claim scans (plurals, ihr, gehört, second-entry routing) identical to
 the previous pack. Determinism: PYTHONHASHSEED 1 and 2 byte-identical.
+Everyday-words round (2026-09-25, vocab-engine tools): subtitle frequency
+left everyday written-register words past the cut. An audit of weather,
+clothing, shopping, transport, housing, work/school admin and food found 81
+gaps. 39 are kept via keep_keys (at B1, own rank order): Ausland, Schnee,
+Treppe, Versicherung, Jacke, Schrank, Zucker, umziehen, Miete, Hemd,
+Parkplatz, Schlafzimmer, Mittagessen, Wolke, Lohn, Kühlschrank, mieten,
+regnen, Getränk, Salz, parken, Gemüse, Kartoffel, Umwelt, Führerschein,
+Supermarkt, Ausweis, Verspätung, Möbel, Hausaufgabe, Reis, Bewerbung,
+Pullover, Formular, Vermieter, Heizung, Haltestelle, Fahrkarte, umsteigen
+(ids w2001-w2039, 2-8 Tatoeba examples each, no generated examples needed).
+With keep_keys alone they displaced the tail of the list, which held
+everyday words (Toilette, Einladung, lächeln, mitkommen, umsonst). So 39
+film-register words near the cut are dropped instead (drop_keys): Weib,
+Führer, Ermittlung, Flucht, Schwert, Monster, Riese, Kaiser, Prinzessin,
+Bombe, Kugel, Täter, Agent, Truppe, Gefangener, Maul, Bulle, Menschheit,
+Kapitän, Engel, Motiv, Grab, Kreuz, Minister, Nation, Wolf, Akt, Wesen,
+Zelle, Wahnsinn, Klappe, Mädel, besiegen, begehen, vernichten, herrschen,
+beschützen, bestrafen, abhauen. No passage used any of the 78 words, so
+pack/passages.json is unchanged. Not reachable: schneien (past the pool),
+Internet and Taxi (proper nouns), Butter (buttern), Gehalt (der Gehalt
+entry wins; Lohn kept). Gloss overrides for 11 of the new words; Reis shows
+"rarely pl." (PLURAL_FIX). Sentences 3,408 -> 3,409. The engine's shared
+drop-everywhere terms removed s1015 (Selbstmord). The other 91 changed
+sentences come from reselection around the 78 words. Other ids, levels and
+glosses are unchanged. Check: 0 errors, 13 warnings. Determinism: two builds
+(PYTHONHASHSEED 123 vs unset) byte-identical.
 <!-- manual:end -->

@@ -6,13 +6,24 @@ Residuals from the v1 QA rounds. The rules already in place are described in
 ## Levels
 - Levels are frequency bands. Subtitle frequency pulls some B1 exam words
   early: obwohl, Erfahrung, Meinung, Zukunft and Entscheidung sit in A2, and
-  trotzdem sits in A1. Bewerbung, Umwelt, Führerschein and Miete fall
-  outside the 2000 words. A written-register frequency list, or a larger
-  pack, would fix this.
-- The subtitle-based word list lacks other everyday words too: Supermarkt,
-  Gemüse, regnen, Schnee, Jacke, Miete, Fahrkarte, Ausland and parken are
-  all missing (per the author, checking against everyday vocabulary while
-  writing the reading passages). A v2 word-list pass should fold these in.
+  trotzdem sits in A1. A written-register frequency list would fix this.
+- Resolved (2026-09-25): the everyday words the subtitle list lacked
+  (Supermarkt, Gemüse, regnen, Schnee, Jacke, Miete, Fahrkarte, Ausland,
+  parken, Bewerbung, Umwelt, Führerschein and 27 more from a weather,
+  clothing, shopping, transport, housing, admin and food audit) are kept via
+  `keep_keys` in langs/de.py, at B1. They displace 39 film-register words
+  near the cut (`drop_keys`). See `tools/REPORT.md`.
+- Everyday words still missing, each blocked by a tagger or pool limit:
+  schneien (ranked past the candidate pool, so `keep_keys` cannot reach it),
+  Internet and Taxi (tagged as proper nouns), Butter (read as the verb
+  buttern), Straßenbahn and E-Mail (no corpus key). Das Gehalt (salary) loses
+  to der Gehalt (content), so Lohn stands in. A gender-homograph audit of the
+  pack's nouns has not been done.
+- Not added (cap of about 40): Mantel, Socke, Mütze, Handschuh, Kasse, Tüte, Ampel,
+  Aufzug, Balkon, Kaution, Lebenslauf, Zeugnis, Praktikum, Tomate, Zwiebel,
+  Salat, Saft, Nudel, Wurst, Bäckerei, Apotheke, Tablette, Fieber,
+  Erkältung, Zahnarzt, Briefmarke, Paket, Rezept, Nebel, Gewitter, tanken,
+  bewerben, Kreuzung, Quittung, Visum.
 
 ## Reading passages
 - A native-speaker pass over the 60 texts has not been done yet; only an
