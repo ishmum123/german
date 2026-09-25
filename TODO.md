@@ -12,7 +12,12 @@ Residuals from the v1 QA rounds. The rules already in place are described in
   parken, Bewerbung, Umwelt, Führerschein and 27 more from a weather,
   clothing, shopping, transport, housing, admin and food audit) are kept via
   `keep_keys` in langs/de.py, at B1. They displace 39 film-register words
-  near the cut (`drop_keys`). See `tools/REPORT.md`.
+  in the B1 band (`drop_keys`: weapons, crime, military, slang, insults such
+  as Schwert, Täter, erschießen, Bulle, sexy), so everyday tail words
+  (Toilette, Einladung, lächeln, mitkommen, umsonst, wegwerfen, drinnen,
+  vorhin) stay. Words kids' books and news use (Prinzessin, Riese, Wolf,
+  Engel, Kaiser, Minister, Nation, Grab, herrschen, besiegen) are kept. The
+  full list and rationale are in langs/de.py and `tools/REPORT.md`.
 - Everyday words still missing, each blocked by a tagger or pool limit:
   schneien (ranked past the candidate pool, so `keep_keys` cannot reach it),
   Internet and Taxi (tagged as proper nouns), Butter (read as the verb

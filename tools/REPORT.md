@@ -38,20 +38,20 @@ Candidate pool: 6,858 (lemma, POS) keys in blended-rank order, one POS per lemma
 Forced A1 items (days, months, seasons, numbers 0-20 + tens + hundert/tausend, colours, personal and possessive pronouns, question words, articles, core prepositions/conjunctions, greetings, A1 core list): 341/341 included.
 Word ids reused from v1 for unchanged (lemma, pos): 1,961; the rest are new ids above w2000 (v1 ids of words whose POS/lemma was wrong are retired, not reassigned).
 
-Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 797, 'verb': 517, 'adj': 320, 'adv': 201, 'prep': 41, 'num': 30, 'conj': 29, 'pron': 27, 'det': 22, 'intj': 7, 'phrase': 5, 'art': 2, 'part': 2}.
+Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 804, 'verb': 513, 'adj': 317, 'adv': 201, 'prep': 41, 'num': 30, 'conj': 29, 'pron': 27, 'det': 22, 'intj': 7, 'phrase': 5, 'art': 2, 'part': 2}.
 
 ## Sentences
 
-- Final sentences: **3,409**, 943 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
-- Word coverage: 0 = 0, 1 = 0, 2 = 2000.
-- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 307,533. Rejected for a content lemma outside pack/top-3000: 165,559.
-- Präteritum (other than sein/haben/modals): 46,249 candidates contain one; 46,204 were blocked for A1/A2 words; 256 in the final set (all lv B1).
-- Primary word level of each sentence: {'A1': 901, 'A2': 1232, 'B1': 1276}.
+- Final sentences: **3,407**, 940 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
+- Word coverage: 0 = 0, 1 = 1, 2 = 1999.
+- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 307,526. Rejected for a content lemma outside pack/top-3000: 165,564.
+- Präteritum (other than sein/haben/modals): 46,247 candidates contain one; 46,204 were blocked for A1/A2 words; 254 in the final set (all lv B1).
+- Primary word level of each sentence: {'A1': 902, 'A2': 1232, 'B1': 1273}.
 - Token-length distribution of the final set:
 
 | tokens | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| sentences | 364 | 711 | 200 | 998 | 1015 | 89 | 20 | 5 | 6 | 1 |
+| sentences | 364 | 709 | 198 | 993 | 1021 | 88 | 21 | 5 | 6 | 2 |
 
 ## Top 100 by rank (lemma [pos] gloss)
 
@@ -246,18 +246,22 @@ Supermarkt, Ausweis, Verspätung, Möbel, Hausaufgabe, Reis, Bewerbung,
 Pullover, Formular, Vermieter, Heizung, Haltestelle, Fahrkarte, umsteigen
 (ids w2001-w2039, 2-8 Tatoeba examples each, no generated examples needed).
 With keep_keys alone they displaced the tail of the list, which held
-everyday words (Toilette, Einladung, lächeln, mitkommen, umsonst). So 39
-film-register words near the cut are dropped instead (drop_keys): Weib,
-Führer, Ermittlung, Flucht, Schwert, Monster, Riese, Kaiser, Prinzessin,
-Bombe, Kugel, Täter, Agent, Truppe, Gefangener, Maul, Bulle, Menschheit,
-Kapitän, Engel, Motiv, Grab, Kreuz, Minister, Nation, Wolf, Akt, Wesen,
-Zelle, Wahnsinn, Klappe, Mädel, besiegen, begehen, vernichten, herrschen,
-beschützen, bestrafen, abhauen. No passage used any of the 78 words, so
+everyday words (Toilette, Einladung, lächeln, mitkommen, umsonst, wegwerfen,
+drinnen, vorhin). So 39 film-register words in the B1 band are dropped
+instead (drop_keys: weapons, crime, military, slang, insults), and no other
+word changes level: Weib, Führer, Ermittlung, Flucht, Schwert, Bombe, Kugel,
+Täter, Agent, Truppe, Gefangener, Maul, Bulle, Akt, Wahnsinn, Klappe, Mädel,
+Mörder, Toter, Schlag, Liebling, Mission, Date, Ex, Haufen, vernichten,
+abhauen, erschießen, ermorden, verhaften, hauen, antun, fliehen, schnappen,
+ausbrechen, hinkriegen, sexy, nackt, schuldig. Words kids' books and news
+use stay (Prinzessin, Riese, Monster, Wolf, Engel, Kaiser, Kapitän, Minister,
+Nation, Grab, Kreuz, Zelle, Wesen, Motiv, Menschheit, beschützen, bestrafen,
+herrschen, begehen, besiegen). No passage used any of the 78 words, so
 pack/passages.json is unchanged. Not reachable: schneien (past the pool),
 Internet and Taxi (proper nouns), Butter (buttern), Gehalt (der Gehalt
 entry wins; Lohn kept). Gloss overrides for 11 of the new words; Reis shows
-"rarely pl." (PLURAL_FIX). Sentences 3,408 -> 3,409. The engine's shared
-drop-everywhere terms removed s1015 (Selbstmord). The other 91 changed
+"rarely pl." (PLURAL_FIX). Sentences 3,408 -> 3,407. The engine's shared
+drop-everywhere terms removed s1015 (Selbstmord). The other changed
 sentences come from reselection around the 78 words. Other ids, levels and
 glosses are unchanged. Check: 0 errors, 13 warnings. Determinism: two builds
 (PYTHONHASHSEED 123 vs unset) byte-identical.
