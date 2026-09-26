@@ -136,7 +136,7 @@ The builder's German module handles what the shared pipeline cannot guess.
   Präteritum of sein, haben and the modals only. Other Präteritum sentences
   are kept for B1.
 - **Typing** is case-insensitive. At A1 and A2, umlauts are lenient: `a` for
-  `ä` is accepted, and the ae/oe/ue/ss spellings are listed as alternatives.
+  `ä` is accepted, and the ae/oe/ue/ss spellings are accepted.
   From B1 on, spelling is strict. A fold-only match is rejected when it
   spells another pack word instead: typed `schon`/`schön` and
   `zahlen`/`zählen` are each distinguished, in both directions.

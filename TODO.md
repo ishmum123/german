@@ -84,9 +84,10 @@ Residuals from the v1 QA rounds. The rules already in place are described in
   Wiktionary's form-of entries. They are not separate words.
 
 ## Engine (vocab-engine repo)
-- Lenient typing folds ä to a but does not accept ae/oe/ue/ss. The pack
-  adds those spellings as `alt`s on A1/A2 words. An engine-level German fold
-  (ae = ä, ss = ß), limited to lenient levels, would be cleaner.
+- Resolved on engine dfd2f6e: lenient typing now accepts ae/oe/ue/ss for
+  ä/ö/ü/ß, both directions, target-side, with the plain accent-strip fold
+  kept. The pack's `alt` spellings on A1/A2 words are no longer needed for
+  this but are left in place.
 - The id map (`tools/id_map_v1.json`) is frozen. It is keyed by the
   builder's internal lowercase lemma (`haus|noun`, `beamter|noun`), not the
   displayed words.json lemma. `.cache/derived/de_idkeys.json` holds the
