@@ -137,7 +137,9 @@ The builder's German module handles what the shared pipeline cannot guess.
   are kept for B1.
 - **Typing** is case-insensitive. At A1 and A2, umlauts are lenient: `a` for
   `ä` is accepted, and the ae/oe/ue/ss spellings are listed as alternatives.
-  From B1 on, spelling is strict.
+  From B1 on, spelling is strict. A fold-only match is rejected when it
+  spells another pack word instead: typed `schon`/`schön` and
+  `zahlen`/`zählen` are each distinguished, in both directions.
 - Compounds stay single lemmas and are never decomposed. Modal verbs are
   drilled as content words.
 
