@@ -6,10 +6,10 @@ their article and plural. Example sentences come with translations and, where
 the licence permits, native audio. The Read tab adds 60 short reading
 passages with comprehension questions (see "Reading passages" below).
 
-**Live:** https://ishmum123.github.io/german/
+**Live:** https://bannerless-studio.github.io/german/
 
 This repo holds the German data pack and the German data files its build
-reads. It includes [`vocab-engine`](https://github.com/ishmum123/vocab-engine)
+reads. It includes [`vocab-engine`](https://github.com/Bannerless-Studio/vocab-engine)
 as a git submodule at `engine/`. The engine holds the shared UI, the drill
 logic and the shared pack builder, `engine/tools/packbuilder`. The builder's
 German rules live in `engine/tools/packbuilder/langs/de.py`.
